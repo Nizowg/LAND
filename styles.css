@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ff7f27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg'); /* Ensure you have this image */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff7f27;
+    margin: 0.2em 0;
+    position: relative;
+    display: inline-block;
+}
+
+h1:after, h2:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, yellow, red, yellow);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    animation: underlineColorChange 3s infinite alternate;
+}
+
+@keyframes underlineColorChange {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+}
+
+h2 {
+    color: #ff7f27;
+    margin: 1em 0;
+    position: relative;
+    display: inline-block;
+}
+
+.vibrate {
+    display: inline-block;
+    animation: vibrate 0.3s infinite alternate;
+    color: #fff600;
+}
+
+@keyframes vibrate {
+    from { transform: translateX(0); }
+    to { transform: translateX(2px); }
+}
+
+ol {
+    list-style-type: decimal;
+    text-align: left;
+    padding-left: 1.5em;
+    color: #ff7f27;
+}
+
+span.vibrate {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff600;
+    transition: color 0.3s;
+}
+
+span.vibrate:hover {
+    color: #ff7f27;
+}
+
